@@ -31,7 +31,7 @@ pipeline {
             steps {
                 sh'''
                     echo 'Testler...'
-                    test -f build/index1.html
+                    test -f build/index.html
                     npm run test
                     ls -la
                 '''
