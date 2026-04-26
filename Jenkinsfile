@@ -37,6 +37,12 @@ pipeline {
                 '''
             }
         }
+        post{
+            always{
+                echo 'Build ve Test tamamlandı.'
+                junit 'test-results/junit.xml'
+            }
+        }
     }
 }
 
