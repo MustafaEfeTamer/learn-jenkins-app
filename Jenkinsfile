@@ -30,7 +30,8 @@ pipeline {
             }
             steps {
                 sh'''
-                    echo 'Testler...'                    
+                    echo 'Testler...'
+                    test -f build/index.html
                     npm run test
                     ls -la
                 '''
