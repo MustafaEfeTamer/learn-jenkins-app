@@ -30,7 +30,6 @@ pipeline {
             }
             steps {
                 sh'''
-                    npm ci
                     echo 'Testler...'
                     test -f build/index.html
                     npm run test
@@ -58,7 +57,7 @@ pipeline {
     post{
         always{
             echo 'Build ve Test tamamlandı.'
-            junit 'test-results/junit.xml'
+            junit 'jest-results/junit.xml'
         }
     }
 }
