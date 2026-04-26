@@ -30,6 +30,7 @@ pipeline {
             }
             steps {
                 sh'''
+                    npm ci
                     echo 'Testler...'
                     test -f build/index.html
                     npm run test
